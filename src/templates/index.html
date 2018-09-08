@@ -1,4 +1,4 @@
-<html>
+<a>
 
 
 <br>
@@ -6,7 +6,8 @@
     {{ title }} is working!!!!1111
 </h1>
     {% for obj in object_list %}
-        {{ obj.title }}</br>
+    <!--{% url "detail" id=obj.id %}-->
+        <a href='{{ obj.get_absolute_url }}'>{{ obj.title }}</a></br>
         {{ obj.content }}</br>
         {{ obj.timestamp }}</br>
         {{ obj.updated }}</br>
